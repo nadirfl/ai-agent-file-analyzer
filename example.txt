@@ -1,0 +1,4 @@
+Dies ist ein Testtext, um die Datei-Analyse zu prüfen.
+TODO: Refaktorieren
+TODO: Dokumentation verbessern
+Weitere Zeilen mit beliebigem Inhalt.

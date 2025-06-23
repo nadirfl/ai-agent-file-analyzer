@@ -1,0 +1,19 @@
+# Setup
+
+## Ollama herunterladen
+1. Unter folgendem Link Ollama herunterladen: https://ollama.com/download
+2. Ollama starten
+3. LLM herunterladen & starten: `ollama run phi3`
+
+## Python Env aufsetzen
+```
+python -m venv venv
+.\venv\Scripts\scripts\activate
+
+# Falls VSC o.Ä. keine .ps Scripts zulässt: Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+
+pip install -r .\requirements.txt
+```
+
+## Agent starten
+`python .\agent.py`
