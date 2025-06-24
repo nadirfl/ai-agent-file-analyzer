@@ -1,0 +1,12 @@
+Ausbaustufen:
+
+[] Workflow aufsetzen, der mehrere Schritte umfasst
+- 3 Schritte: 
+-- Text klassifizieren (OK, NOK, NA)
+-- Text nach JSON umwandeln mit Klassifizierung
+-- Je nach Klassifizierung Aktion vornehmen, bei NA User benachrichtigen
+
+[] Aus Text/Mail eine JIRA-Anforderung in JSON abbilden für REST-API
+
+
+ 

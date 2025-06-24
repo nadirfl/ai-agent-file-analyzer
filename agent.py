@@ -1,9 +1,14 @@
 from llm import ask_ollama
-from tools.file_analyzer import analyze_file
-from tools.summarize import summarize_text
+from tool_manager import load_tools
+
+tools = load_tools()
 
 def main():
     print("AI-Agent gestartet")
+
+    print("Tools geladen: ")
+    for t in tools.values():
+        print(f" - {t['name']}: {t['desc']}")
 
     while True:
         user_input = input("Was soll ich tun?\n> ")
@@ -11,26 +16,29 @@ def main():
             print("Beende Session")
             break
 
-        decision_prompt = (
-            "Du bist ein Agent mit den Tools:\n"
-            "- datei: analysiert Textdateien\n"
-            "- zusammenfassen: fasst Texte zusammen\n"
-            "Nenne nur das passende Tool für die folgende Anfrage:\n"
-            f"{user_input}"
-        )
+        tool_list_str = "\n".join([f"- {t['name']}: {t['desc']}" for t in tools.values()])
+
+        decision_prompt = f"""
+Du bist ein Agent mit den folgenden Tools:
+
+{tool_list_str}
+
+Basierend auf dieser Benutzeranfrage:
+\"{user_input}\""
+
+Welches Tool soll verwendet werden? Gib exakt den Toolnamen zurück.
+"""
 
         decision = ask_ollama(decision_prompt).lower()
 
         print("Decision Prompt Output: ", decision)
 
-        if "datei" in decision:
-            path = input("Pfad zur Datei:\n> ")
-            result = analyze_file(path)
-            print(result)
-        elif "zusammenfassen" in user_input.lower():
-            text = input("Text eingeben:\n> ")
-            summary = summarize_text(text)
-            print("Tool-Antwort: ", summary)
+        for key, tool in tools.items():
+            if decision in tool["name"].lower():
+                print("Folgendes Tool wurde gewählt: ", tool["name"])
+                result = tool["run"](user_input)
+                print("Ergebnis: ", result)
+                break    
         else:
             print("Ich bin mir unsicher, versuche direkte Antwort zu geben...")
             answer = ask_ollama(user_input)

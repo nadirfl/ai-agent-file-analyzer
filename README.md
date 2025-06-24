@@ -8,7 +8,7 @@
 ## Python Env aufsetzen
 ```
 python -m venv venv
-.\venv\Scripts\scripts\activate
+.\venv\Scripts\activate
 
 # Falls VSC o.Ä. keine .ps Scripts zulässt: Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
 
