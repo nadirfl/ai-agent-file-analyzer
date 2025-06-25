@@ -16,3 +16,4 @@ def run(path):
 
 TOOL_NAME = "Datei"
 TOOL_DESC = "Analysiert Textdateien"
+TOOL_USAGE = "AGENT"

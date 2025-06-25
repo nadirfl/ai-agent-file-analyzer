@@ -1,7 +1,7 @@
 from llm import ask_ollama
 from tool_manager import load_tools
 
-tools = load_tools()
+tools = load_tools(usage_filter="AGENT")
 
 def main():
     print("AI-Agent gestartet")

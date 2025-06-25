@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Julia Mustermann",
+    "email": "kunde@exampletermandt.de",
+    "product": "Bio-Kaffee 50deka Gramm",
+    "quantity": 2,
+    "delivery_date": "30. Juli",
+    "delivery_address": "Musterstraße 12, 12345 Beispielstadt"
+  }
+]

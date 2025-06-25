@@ -3,3 +3,4 @@ def run(text):
 
 TOOL_NAME = "Zusammenfassung"
 TOOL_DESC = "Fasst einen beliebigen Text kurz zusammen."
+TOOL_USAGE = "AGENT"

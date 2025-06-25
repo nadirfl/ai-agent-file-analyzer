@@ -2,14 +2,19 @@ import importlib
 import pkgutil
 import tools
 
-def load_tools():
+def load_tools(usage_filter=None):
     registry = {}
-    for loader, name, _ in pkgutil.iter_modules(tools.__path__):
+    for _, name, _ in pkgutil.iter_modules(tools.__path__):
         module = importlib.import_module(f"tools.{name}")
-        if hasattr(module, "run"):
+        if not hasattr(module, "run"):
+            continue
+
+        usage = getattr(module, "TOOL_USAGE", "ALL")
+        if usage_filter is None or usage_filter in usage or usage == "ALL":
             registry[name] = {
                 "run": module.run,
                 "name": getattr(module, "TOOL_NAME", name),
-                "desc": getattr(module, "TOOL_DESC", "Kein Beschreibungstext")
+                "desc": getattr(module, "TOOL_DESC", "Kein Beschreibungstext"),
+                "usage": usage
             }
     return registry

@@ -10,3 +10,4 @@ def run(_):
 
 TOOL_NAME = "Datenimport"
 TOOL_DESC = "Lädt eine definierte Datei ein"
+TOOL_USAGE = "WORKFLOW"

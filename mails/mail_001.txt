@@ -1,0 +1,13 @@
+Guten Tag,
+
+Ich möchte gerne 2x Produkt „Bio-Kaffee 500g“ bestellen.
+Bitte liefern Sie es an:
+
+Musterstraße 12
+12345 Beispielstadt
+
+Lieferdatum: 30. Juli
+Meine E-Mail: kunde@example.com
+Name: Julia Mustermann
+
+Vielen Dank!

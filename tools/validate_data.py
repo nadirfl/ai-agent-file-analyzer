@@ -3,3 +3,5 @@ def run(df):
     if not expected_cols.issubset(df.columns):
         raise ValueError("Erwartete Spalten fehlen")
     return "Daten validiert"
+
+TOOL_USAGE = "WORKFLOW"
