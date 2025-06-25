@@ -3,7 +3,7 @@
 ## Ollama herunterladen
 1. Unter folgendem Link Ollama herunterladen: https://ollama.com/download
 2. Ollama starten
-3. LLM herunterladen & starten: `ollama run phi3`
+3. LLM herunterladen & starten: `ollama run mistral`
 
 ## Python Env aufsetzen
 ```
