@@ -5,8 +5,9 @@ tools = load_tools()
 
 def main():
     print("AI-Agent gestartet")
+    print("------------------")
 
-    print("Tools geladen: ")
+    print("Folgende Tools stehen zur Verfügung: ")
     for t in tools.values():
         print(f" - {t['name']}: {t['desc']}")
 

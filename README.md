@@ -17,3 +17,10 @@ pip install -r .\requirements.txt
 
 ## Agent starten
 `python .\agent.py`
+
+# Was beinhaltet dieses Projekt?
+
+# Spick
+`pip list`
+
+`pip freeze > requirements.txt`
