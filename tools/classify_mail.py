@@ -20,6 +20,6 @@ Mail:
 {mail_text}
 \"\"\"
 
-Antworte nur mit: INFO, AUTO oder TODO
+Antworte zwingend nur mit einer der entsprechenden Kategorien: INFO, AUTO oder TODO
 """
     return ask_ollama(prompt)

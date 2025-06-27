@@ -6,5 +6,13 @@
     "quantity": 2,
     "delivery_date": "30. Juli",
     "delivery_address": "Musterstraße 12, 12345 Beispielstadt"
+  },
+  {
+    "name": "Julia Mustermann",
+    "email": "kunde@exampledemail.com",
+    "product": "Bio-Kaffee 500g",
+    "quantity": 2,
+    "delivery_date": "30. Juli",
+    "delivery_address": "Musterstraße 12, 12345 Beispielstadt"
   }
 ]

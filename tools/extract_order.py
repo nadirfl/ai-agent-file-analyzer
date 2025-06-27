@@ -30,7 +30,7 @@ Extrahiere die Informationen in ein JSON aus folgendem Mail:
 {mail_text}
 \"\"\"
 
-Gib das Ergebnis nur als JSON zurück ohne Markdown oder Erklärungen.
+Gib das Ergebnis nur als gültiges JSON zurück ohne Markdown oder Erklärungen.
 """
     raw = ask_ollama(prompt)
     raw = re.sub(r"^```json", "", raw, flags=re.IGNORECASE).strip()
